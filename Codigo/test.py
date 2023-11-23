@@ -2,13 +2,24 @@ import unittest
 import fibo
 
 class Test(unittest.TestCase):
-    def testCinco(self):
+
+   
+
+    def testCincoPosicionEqual(self):
        
-        mensaxe="Test Incorrecto Fibo Posición 5 Resultado 3"
+        #Test assertEqual función position 
+        self.assertEqual(fibo.position(5),3,"Test Incorrecto Función POSITION 5 Resultado !=3")
+       
+    def testCincoFibonacciNotEqual(self):
+       
+       #Test assertEqual funcion fibonacci position 
+        self.assertNotEqual(fibo.fibonacci(5),3,"Test Incorrecto Función POSITION 5 Resultado !=3")
         
-        self.assertEqual(fibo.position(5),3,mensaxe)
-        self.assertNotEqual(fibo.fibonacci(5),3,mensaxe)
-        #self.assertEqual(fibo.fibonacci(5),3,mensaxe)
+
+    def testCincoFibonacciEqual(self):
+       
+        #Test assertEqual función fibonacci 
+        self.assertEqual(fibo.fibonacci(5),3,"Test Incorrecto Función FIBO 5 Resultado !=3")
 
 
 if __name__=='__main__':
