@@ -16,14 +16,14 @@ def fibonacci(n):
   
 #Temos en conta que Función Fibonacci previa conta os indices dende Cero coma un Array
 #Para facer coincidir a Posición co Indice creo Función no que gardamos en array a secuencia e mostramos a posición requerida
-#def position(p=int(input("Introduce unha Posición:"))):
-def position(p=(input("Introduce unha Posición:"))):  
-    
+#def position(p=(input("Introduce unha Posición:"))):  
+def position(p):  
+
     try:
         p=int(p)  
         
         if p <= 0:
-            print("Sorry!!!, La Posición debe ser un Número Mayor que Cero")
+            print("Sorry!!!, A Posición debe ser un Número Maior de Cero")
         else:
             posicion=[fibonacci(n) for n in range(p)]
             #return print ("Para la Posición", p, "el Número es:", posicion[-1])
@@ -34,5 +34,5 @@ def position(p=(input("Introduce unha Posición:"))):
 #chamamos o programa principal
 if __name__ == '__main__':
     
-    print(position())
-    #position()
+    print(position(p=(input("Introduce unha Posición:"))))  
+    #position(p=(input("Introduce unha Posición:")))
